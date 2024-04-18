@@ -1,0 +1,18 @@
+{
+    "routes":[
+        {
+            "src":"/",
+            "dest":"/api/customers.js"
+        },
+        {
+            "src":"/customer",
+            "methods":[
+                "POST",
+                "GET",
+                "PUT",
+                "PATCH"
+            ],
+            "dest":"/api/customers.js"
+        }
+    ]
+}
