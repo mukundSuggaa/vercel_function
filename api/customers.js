@@ -4,7 +4,7 @@ module.exports = async (req, res) => {
     if (req.method === 'POST') {
         await connectToDatabase();
         // extract email from query
-        let { email } = req.body;
+        let { email } = req.body.input;
         let result;
 
         if (!email) {
@@ -12,8 +12,6 @@ module.exports = async (req, res) => {
                 image_url:"none"
             });
             return;
-            // result = (await client.query('SELECT * FROM users')).rows;
-            // console.log('Query result:', result);
         } else {
             result = (await client.query(`SELECT * FROM customers where email='${email}'`)).rows;
         }
