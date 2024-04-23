@@ -1,33 +1,3 @@
 {
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/api/customers.js"
-    },
-    {
-      "src": "/customer",
-      "methods": ["POST", "GET", "PUT", "PATCH"],
-      "dest": "/api/customers.js"
-    },
-    {
-      "src": "/user",
-      "methods": ["POST"],
-      "dest": "/api/user.js"
-    },
-    {
-      "src": "/invoice",
-      "methods": ["POST"],
-      "dest": "/api/invoice.js"
-    },
-    {
-      "src": "/handle-todo",
-      "methods": ["POST"],
-      "dest": "/api/triggerZeplo.ts"
-    },
-    {
-      "src": "/handle-dones",
-      "methods": ["POST"],
-      "dest": "/api/doneStatusHandler.ts"
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
 }

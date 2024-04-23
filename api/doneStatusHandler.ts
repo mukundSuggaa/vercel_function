@@ -8,7 +8,7 @@ export default async (
 ) => {
   if (req.method === "POST") {
     try {
-      console.log("done");
+      console.log("done hit by zeploo");
       // Connect to the database
       await Database.connectToDatabase();
       const insertQuery =

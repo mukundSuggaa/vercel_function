@@ -26,8 +26,8 @@ export default async (
   if (req.method === "POST") {
     try {
       const ZEPLO_AUTH_TOKEN = process.env.ZEPLO_AUTH_TOKEN as string;
-      const url =
-        "https://zeplo.to/ea75-2406-7400-81-445e-f596-f532-35ae-d861.ngrok-free.app/handle-dones?_interval=60";
+      console.log("hit: body", req.body);
+      const url = `https://zeplo.to/https://36b5-2406-7400-81-445e-f596-f532-35ae-d861.ngrok-free.app/handle-dones?_interval=60&_retry=3`;
       const response = await fetch(url, {
         method: "POST",
         headers: {
