@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/pg": "^8.11.5",
     "@vercel/node": "^3.0.26"
   },
   "dependencies": {
